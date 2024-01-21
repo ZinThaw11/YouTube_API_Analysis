@@ -210,11 +210,11 @@ fig.update_layout(showlegend=False,
                   yaxis_title="Total Subscribers",
                   xaxis2_title="Channel Name",
                   yaxis2_title="Total Views",
-                width=800,  # Set the width to 1000 pixels
+                    # Set the width to 1000 pixels
                 height=500)
 
 # Show the plot
-st.plotly_chart(fig)
+st.plotly_chart(fig,use_container_width=True)
 
 st.divider()
 
