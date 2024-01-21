@@ -219,7 +219,7 @@ st.plotly_chart(fig)
 st.divider()
 
 st.header('Get video statistics for all the channels')
-st.caption('In the next step, we will obtain the video statistics for all the channels. In total, we obtained 3,722 videos as seen in below.')
+st.caption('In the next step, we will obtain the video statistics for all the channels. In total, we obtained 315 videos as seen in below.')
 
 # Create empty lists to store DataFrames temporarily
 video_dfs = []
