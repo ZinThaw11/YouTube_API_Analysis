@@ -11,8 +11,8 @@ import streamlit as st
 
 st.title('Exploratory Data Analysing Using Youtube Video Data from Most Popular Myanmar Telemedicine Channels')
 st.header('Introduction', divider='red')
-st.caption('Founded in 2005, Youtube has grown to become the second largest search engine in the world (behind Google) that processes more than 3 billion searches per month. [1]. It is, however, generally a myth how the Youtube algorithm works, what makes a video get views and be recommended over another. In fact, YouTube has one of the largest scale and most sophisticated industrial recommendation systems in existence [2]. For new content creators, it is a challenge to understand why a video gets video and others do not. There are many "myths" around the success of a Youtube video [3], for example if the video has more likes or comments, or if the video is of a certain duration. It is also worth experimenting and looking for "trends" in the topics that Youtube channels are covering in a certain niche')
-st.caption('In this project will explore the statistics of top 5 most successful Telemedicine Youtube channel from Myanmar.')
+st.caption('YouTube, a dynamic platform processing over 3 billion searches monthly, stands as the second-largest search engine globally. Deciphering the elements that contribute to a video's success on YouTube poses a challenge. In this exploration, we delve into the statistical landscape of the top five Telemedicine YouTube channels from Myanmar, unraveling the mysteries behind video views, subscribers, and more.')
+
 
 api_key = 'AIzaSyARZvA4lT3s1w8s-E3HePFZ4sh_eivCPz0'
 channel_id = 'UCwaed_IVBHjym8YVXhE9vLA'
