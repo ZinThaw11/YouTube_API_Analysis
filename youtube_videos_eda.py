@@ -345,21 +345,27 @@ st.plotly_chart(fig,use_container_width=True)
 
 st.divider()
 
-st.header('Does title length matter for views?')
+fig = make_subplots(rows=1, cols=2, subplot_titles=['Does title length matter for views?', 'Number of Tags Vs Views'])
 
-fig = px.scatter(video_df, x = "titleLength", y = "viewCount",
+
+
+fig1 = px.scatter(video_df, x = "titleLength", y = "viewCount",
                  labels={'titleLength':'Video Title Length',
                      'viewCount':'Total View'})
-st.plotly_chart(fig)
 st.caption('There is no clear relationship between title length and views as seen the scatterplot below, but most-viewed videos tend to have average title length of 40-80 characters.')
 
-st.divider()
-
-st.header('Number of Tags Vs Views')
-
-fig = px.scatter(video_df, x = "tagsCount", y = "viewCount",
+fig2 = px.scatter(video_df, x = "tagsCount", y = "viewCount",
                  labels={'tagsCount':'Video Tags Count',
                      'viewCount':'Total View'})
+
+# Update subplots
+fig.add_trace(fig1['data'][0], row=1, col=1)
+fig.add_trace(fig2['data'][0], row=1, col=2)
+
+# Update layout
+fig.update_layout(showlegend=False,height=500)
+
+# Show the plot
 st.plotly_chart(fig,use_container_width=True)
 
 st.divider()
