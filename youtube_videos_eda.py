@@ -375,7 +375,7 @@ fig = px.bar(x=tb.index, y=tb.values, labels={'y': 'Count'}, title="Video Public
 fig.update_layout(title_text="Video Publication Days Count", xaxis_title="Day of Week", yaxis_title="Count")
 
 # Show the plot
-st.plotly_chart(fig,use_container_width=True)
+st.plotly_chart(fig,use_container_width=True,height=500)
 
 st.caption("It's interesting to see that more videos are uploaded on Mondays to Fridays. Fewer videos are uploaded during the weekend.")
 
