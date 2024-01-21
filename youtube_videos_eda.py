@@ -347,8 +347,6 @@ st.divider()
 
 fig = make_subplots(rows=1, cols=2, subplot_titles=['Does title length matter for views?', 'Number of Tags Vs Views'])
 
-
-
 fig1 = px.scatter(video_df, x = "titleLength", y = "viewCount",
                  labels={'titleLength':'Video Title Length',
                      'viewCount':'Total View'})
@@ -363,7 +361,12 @@ fig.add_trace(fig1['data'][0], row=1, col=1)
 fig.add_trace(fig2['data'][0], row=1, col=2)
 
 # Update layout
-fig.update_layout(showlegend=False,height=500)
+fig.update_layout(showlegend=False,
+                  xaxis_title="Title Length",
+                  yaxis_title="Total View",
+                  xaxis2_title="Tags Count",
+                  yaxis2_title="Total View",
+                  height=500)
 
 # Show the plot
 st.plotly_chart(fig,use_container_width=True)
