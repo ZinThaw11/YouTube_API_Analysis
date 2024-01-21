@@ -1,0 +1,7 @@
+streamlit
+matplotlib
+pandas
+plotly
+import parser
+import isodate
+from googleapiclient.discovery import build
