@@ -9,7 +9,7 @@ import warnings
 warnings.filterwarnings("ignore", category=FutureWarning)
 import streamlit as st
 st.set_page_config(page_title='Myanmar Telemedicine Channels',page_icon=':bar_chart',layout='wide')
-st.title('Exploratory Data Analysing Using Youtube Video Data from Most Popular Myanmar Telemedicine Channels')
+st.title('Exploring Insights: Data Analysis of YouTube Video Data from Top Myanmar Telemedicine Channels')
 
 st.header('Introduction', divider='red')
 st.caption("YouTube, a dynamic platform processing over 3 billion searches monthly, stands as the second-largest search engine globally. Deciphering the elements that contribute to a video's success on YouTube poses a challenge. In this exploration, we delve into the statistical landscape of the top five Telemedicine YouTube channels from Myanmar, unraveling the mysteries behind video views, subscribers, and more.")
