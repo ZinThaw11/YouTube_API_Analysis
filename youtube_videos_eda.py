@@ -264,7 +264,7 @@ video_df['titleLength'] = video_df['title'].apply(lambda x: len(x))
 fig = px.box(video_df, x = "channelTitle", y = "viewCount",  title='Distribution of Views per Channel',
              labels={'channelTitle':'Channel Titles',
                      'viewCount':'Total View'})
-st.plotly_chart(fig)
+st.plotly_chart(fig,use_container_width=True)
 
 st.divider()
 
@@ -293,7 +293,7 @@ fig.update_layout(title_text="Subplots of Comment Count and Like Count vs View C
                 legend=dict(orientation="h", y=-0.2))
 
 # Show the plot
-st.plotly_chart(fig)
+st.plotly_chart(fig,use_container_width=True)
 
 st.divider()
 
@@ -308,7 +308,7 @@ fig = px.histogram(filtered_df, x="durationSecs_numeric", nbins=100, title="Hist
 fig.update_layout(title_text="Histogram of Video Durations")
 
 # Show the plot
-st.plotly_chart(fig)
+st.plotly_chart(fig,use_container_width=True)
 
 st.divider()
 
@@ -341,7 +341,7 @@ fig.update_layout(title_text="Subplots of Comment Count and Like Count vs Durati
                   legend=dict(orientation="h", y=-0.2))  # Set the height to 500 pixels
 
 # Show the plot
-st.plotly_chart(fig)
+st.plotly_chart(fig,use_container_width=True)
 
 st.divider()
 
@@ -360,7 +360,7 @@ st.header('Number of Tags Vs Views')
 fig = px.scatter(video_df, x = "tagsCount", y = "viewCount",
                  labels={'tagsCount':'Video Tags Count',
                      'viewCount':'Total View'})
-st.plotly_chart(fig)
+st.plotly_chart(fig,use_container_width=True)
 
 st.divider()
 
@@ -375,7 +375,7 @@ fig = px.bar(x=tb.index, y=tb.values, labels={'y': 'Count'}, title="Video Public
 fig.update_layout(title_text="Video Publication Days Count", xaxis_title="Day of Week", yaxis_title="Count")
 
 # Show the plot
-st.plotly_chart(fig)
+st.plotly_chart(fig,use_container_width=True)
 
 st.caption("It's interesting to see that more videos are uploaded on Mondays to Fridays. Fewer videos are uploaded during the weekend.")
 
