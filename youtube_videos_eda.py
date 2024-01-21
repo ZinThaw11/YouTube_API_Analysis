@@ -289,7 +289,8 @@ fig.update_layout(title_text="Subplots of Comment Count and Like Count vs View C
                   xaxis2_title="Total Like Count",
                   yaxis2_title="Total View Count",
                 width=1200,  # Set the width to 1000 pixels
-                height=500)   # Set the height to 800 pixels
+                height=500,
+                legend=dict(orientation="h", y=-0.2)))
 
 # Show the plot
 st.plotly_chart(fig)
