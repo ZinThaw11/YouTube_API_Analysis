@@ -265,7 +265,7 @@ fig = px.box(video_df, x = "channelTitle", y = "viewCount",  title='Distribution
              labels={'channelTitle':'Channel Titles',
                      'viewCount':'Total View'})
 st.plotly_chart(fig,use_container_width=True)
-
+st.caption('Analyzing the video statistics across all channels reveals the distribution of views. Notably, Mydoctor leads the pack with the highest view count, followed by MyanCare. The remaining channels, unfortunately, seem to attract significantly fewer viewers.')
 st.divider()
 
 import plotly.graph_objects as go
