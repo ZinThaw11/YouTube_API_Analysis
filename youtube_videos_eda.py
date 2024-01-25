@@ -353,7 +353,7 @@ fig = make_subplots(rows=1, cols=2, subplot_titles=['Does title length matter fo
 fig1 = px.scatter(video_df, x = "titleLength", y = "viewCount",
                  labels={'titleLength':'Video Title Length',
                      'viewCount':'Total View'})
-st.caption('There is no clear relationship between title length and views as seen the scatterplot below, but most-viewed videos tend to have average title length of 40-80 characters.')
+
 
 fig2 = px.scatter(video_df, x = "tagsCount", y = "viewCount",
                  labels={'tagsCount':'Video Tags Count',
@@ -373,7 +373,7 @@ fig.update_layout(showlegend=False,
 
 # Show the plot
 st.plotly_chart(fig,use_container_width=True)
-
+st.caption('There is no clear relationship between title length and views as seen the scatterplot below, but most-viewed videos tend to have average title length of 40-80 characters.')
 st.divider()
 
 st.header('Which day in the week are most videos uploaded?')
