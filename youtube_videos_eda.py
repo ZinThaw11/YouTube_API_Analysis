@@ -268,6 +268,7 @@ st.plotly_chart(fig,use_container_width=True)
 st.caption('Analyzing the video statistics across all channels reveals the distribution of views. Notably, Mydoctor leads the pack with the highest view count, followed by MyanCare. The remaining channels, unfortunately, seem to attract significantly fewer viewers.')
 st.divider()
 
+st.header('Does the number of likes and comments matter for a video to get more views?')
 import plotly.graph_objects as go
 from plotly.subplots import make_subplots
 
@@ -294,9 +295,11 @@ fig.update_layout(title_text="Subplots of Comment Count and Like Count vs View C
 
 # Show the plot
 st.plotly_chart(fig,use_container_width=True)
-
+st.caption('Firstly, I would like to check if comments and likes do correlate with how many views a video would get. In the plots below, it can be observed that the number of views and number of comments/ likes slightly correlated with each other.')
 st.divider()
 
+st.header('Does the video duration matter for views and interaction (likes/ comments)?')
+st.caption('As can be seen in the histogram below, most videos are between 300 to 1200 seconds, which is about 5 to 20 minutes. Here I have to limit the duration to 10,000 because of some really long videos (potentially streaming videos).')
 # Filter based on duration in seconds
 filtered_df = video_df[video_df['durationSecs'].dt.seconds < 10000]
 
@@ -342,7 +345,7 @@ fig.update_layout(title_text="Subplots of Comment Count and Like Count vs Durati
 
 # Show the plot
 st.plotly_chart(fig,use_container_width=True)
-
+st.caption('Now we plot the duration against comment count and like count. It can be seen that actually shorter videos tend to get more likes and comments than very long videos.')
 st.divider()
 
 fig = make_subplots(rows=1, cols=2, subplot_titles=['Does title length matter for views?', 'Number of Tags Vs Views'])
