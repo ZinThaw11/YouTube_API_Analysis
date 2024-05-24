@@ -5,3 +5,4 @@ plotly.express
 python-dateutil
 isodate
 google-api-python-client
+test.txt
